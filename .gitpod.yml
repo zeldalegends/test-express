@@ -1,0 +1,18 @@
+tasks:
+  - init: |
+      docker-compose pull
+  - command: |
+      docker-compose up -d
+      docker ps
+
+ports:
+  - port: 9300
+    onOpen: ignore
+  - port: 5601
+    onOpen: open-browser
+  - port: 9200
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker

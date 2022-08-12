@@ -3,4 +3,4 @@ services:
     image: node
     ports:
       - "8000:8000"
-    command: ["CMD", "npm", "i", "express", "&", "npm", "i", "body-parser", "&", "node", "https://raw.githubusercontent.com/zeldalegends/tutorials.PEP-Proxy/custom-aio/express-app/server.js"]
+    command: node -e "require('http').createServer(function (req, res) {res.write(req.url);res.end();}).listen(8000);"

@@ -6,11 +6,7 @@ tasks:
       docker ps
 
 ports:
-  - port: 9300
-    onOpen: ignore
-  - port: 5601
-    onOpen: open-browser
-  - port: 9200
+  - port: 8000
     onOpen: open-preview
 
 vscode:
